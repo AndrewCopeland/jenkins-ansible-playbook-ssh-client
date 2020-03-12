@@ -1,0 +1,8 @@
+---
+- hosts: ubuntu
+  remote_user: {{ lookup('env','USERNAME') }}
+  tasks:
+  - name: create hello world file
+    shell: touch hell_world.txt
+  - name: add content to hello world
+    shell: echo "Hello World!" > hello_world.txt
